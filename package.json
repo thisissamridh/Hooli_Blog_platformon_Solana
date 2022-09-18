@@ -1,0 +1,31 @@
+{
+  "name": "hooli blog portal",
+  "version": "1.0.0",
+  "description": "hooli blog portal is a blog portal",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --watch backend --exec node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --force --prefix frontend && npm run build --prefix frontend"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "medium",
+    "clone",
+    "mern",
+    "mernstack"
+  ],
+  "author": "pied pipers",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.2",
+    "nodemon": "^2.0.15"
+  }
+}
